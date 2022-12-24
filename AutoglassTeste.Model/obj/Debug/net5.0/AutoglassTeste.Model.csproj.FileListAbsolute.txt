@@ -1,0 +1,11 @@
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\bin\Debug\net5.0\AutoglassTeste.Model.deps.json
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\bin\Debug\net5.0\AutoglassTeste.Model.dll
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\bin\Debug\net5.0\ref\AutoglassTeste.Model.dll
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\bin\Debug\net5.0\AutoglassTeste.Model.pdb
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.AssemblyInfoInputs.cache
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.AssemblyInfo.cs
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.csproj.CoreCompileInputs.cache
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.dll
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\ref\AutoglassTeste.Model.dll
+C:\Users\augus\source\repos\AutoglassTeste\AutoglassTeste.Model\obj\Debug\net5.0\AutoglassTeste.Model.pdb
