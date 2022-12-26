@@ -13,7 +13,7 @@ namespace AutoglassTeste.Api.Migrations
                 {
                     Codigo = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DescricaoProduto = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    DescricaoProduto = table.Column<string>(type: "nvarchar(200)", nullable: false),
                     SituacaoProduto = table.Column<int>(type: "int", nullable: false),
                     DataValidade = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataFabricacao = table.Column<DateTime>(type: "datetime2", nullable: false),
