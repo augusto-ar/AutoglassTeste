@@ -1,4 +1,4 @@
-﻿using AutoglassTeste.Data.Config;
+using AutoglassTeste.Data.Config;
 using AutoglassTeste.Data.Interface;
 using AutoglassTeste.Data.Repository;
 using AutoglassTeste.Domain;
@@ -24,7 +24,10 @@ namespace AutoglassTeste.Data.BLL
 
         public ProdutoModel Ler(int codigo)
         {
-            var domain = produtoRepository.Ler(codigo);
+            var domain = (from p in produtoRepository.Listar()
+                          where p.Codigo == codigo && p.SituacaoProduto == SituacaoProduto.Ativo
+                          select p).FirstOrDefault(); ;
+
             return ConvertObj<ProdutoModel>(domain);
         }
         public void Salvar(ProdutoModel model)
@@ -53,9 +56,10 @@ namespace AutoglassTeste.Data.BLL
             }
         }
 
-        public List<ProdutoModel> Listar(FilterModel filterModel, int take, int skip)
+        public List<ProdutoModel> Listar(FiltroModel filterModel, int take, int skip)
         {
             var query = (from p in produtoRepository.Listar()
+                         where p.SituacaoProduto == SituacaoProduto.Ativo
                          select p);
 
             if (filterModel.DataValidade.HasValue)
@@ -80,16 +84,16 @@ namespace AutoglassTeste.Data.BLL
         {
             var domain = produtoRepository.Ler(codigo);
             domain.SituacaoProduto = SituacaoProduto.Inativo;
-            produtoRepository.Salvar(domain);
+            produtoRepository.Atualizar(domain);
             produtoRepository.Commit();
         }
 
         private bool ValidarModel(ProdutoModel model)
         {
             if (model.DataFabricacao.Date >= model.DataValidade.Date)
-            {
                 Notificacao.Adicionar("Data de fabricação tem quer ser inferio a data de validade");
-            }
+            else if (string.IsNullOrEmpty(model.DescricaoProduto))
+                Notificacao.Adicionar("Necessário informar a descrição do produto");
 
             return !Notificacao.HasErro;
         }
