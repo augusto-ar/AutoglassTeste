@@ -56,7 +56,7 @@ namespace AutoglassTeste.Data.BLL
             }
         }
 
-        public List<ProdutoModel> Listar(FiltroModel filterModel, int take, int skip)
+        public List<ProdutoModel> Listar(FilterModel filterModel, int take, int skip)
         {
             var query = (from p in produtoRepository.Listar()
                          where p.SituacaoProduto == SituacaoProduto.Ativo
